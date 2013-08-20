@@ -9,4 +9,13 @@ describe Profile do
       profile.full_name.should == 'John Doe'
     end
   end
+
+  describe "#to_s" do
+
+    it "returns the full name" do
+      profile = Profile.new(firstname: 'John', lastname: 'Doe')
+      profile.to_s.should == 'John Doe'
+    end
+
+  end
 end
